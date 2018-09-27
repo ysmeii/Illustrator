@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, Image, AsyncStorage } from 'react-native';
 import { connect } from 'react-redux';
 
 class ReviewSavePrint extends Component {
@@ -10,7 +10,7 @@ class ReviewSavePrint extends Component {
   }
 
   saveData() {
-    if (this.coverageName && this.coverageTerm) {
+    if (this.props.coverageName) {
         let application = {
             modeOfPayment: this.props.modeOfPayment,
             coverageName: this.props.coverageName,
@@ -49,7 +49,8 @@ class ReviewSavePrint extends Component {
             hospitalCashName: this.props.hospitalCashName,
             childTermBenefitName: this.props.childTermBenefitName
           }
-        AsyncStorage.setItem(this.props.coverageName + ' ' + this.props.coverageTerm, JSON.stringify(application));
+        AsyncStorage.setItem('savetest1', JSON.stringify(application));
+        alert('Application Saved');
     }
   }
 
@@ -64,7 +65,7 @@ class ReviewSavePrint extends Component {
             <Image style={styles.icon} source={require('../../images/printIcon.png')}/>
             <Text>Print</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.saveButton}>
+        <TouchableOpacity style={styles.saveButton} onPress={() => this.saveData()}>
             <Image style={styles.icon} source={require('../../images/saveIcon.png')}/>
             <Text>Save</Text>
         </TouchableOpacity>

@@ -309,7 +309,7 @@ export default class IllustrationSelection extends Component {
             <ScrollView contentContainerStyle={styles.container}>
                 <HeaderLogo />
                 <NewSaveIllustration navigation={this.props.navigation}/>
-                <SelectionList />
+                <SelectionList navigation={this.props.navigation}/>
             </ScrollView>
         </Provider>
     );

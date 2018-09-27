@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, TextInput, Picker, StyleSheet } from 'react-native';
+import { View, Text, TextInput, Picker, StyleSheet, AsyncStorage, TouchableOpacity } from 'react-native';
 import { connect } from 'react-redux';
 import { CheckBox } from 'react-native-elements'
 
@@ -7,22 +7,98 @@ class SelectionList extends Component {
   constructor(props) {
     super(props);
     this.state = {
+        firstName: '',
+        lastName: '',
+        coverageName: '',
+        coverageTerm: '',
+        isMounted: false,
+        keys: [],
+        parsedData: {}
     };
   }
 
+  
+
+//   componentDidMount () {
+//     this.setState({isMounted: true})
+//   }
+
+//   componentWillUnmount () {
+//     this.setState({isMounted: false})
+//   }
+
+//   getAllKeys () {
+//     AsyncStorage.getAllKeys((err, keys) => {
+//         AsyncStorage.multiGet(keys, (err, stores) => {
+//           stores.map((result, i, store) => {
+//             // get at each store's key/value so you can work with it
+//             //this.setState({keys: store[i][0]})
+//           });
+//         });
+//       });
+//     console.log(this.state.keys);
+//   }
+
+  componentDidMount() {
+    this.getData();
+  }
+
+  getData =  async () => {
+      try {
+        // AsyncStorage.getAllKeys((err, keys) => {
+        //     AsyncStorage.multiGet(keys, (err, stores) => {
+        //       stores.map((result, i, store) => {
+        //         console.log(store[i][0])
+        //         let parsed = JSON.parse(store[i][1]);
+        //         // this.setState({keys: joined});
+        //         // console.log(parsed.firstName);
+        //         // console.log(this.state.keys)
+        //       });
+        //     });
+        //   });
+        let savetest1 = await AsyncStorage.getItem('savetest1');
+        let parsed = JSON.parse(savetest1);
+            this.setState({firstName: parsed.firstName});
+            this.setState({lastName: parsed.lastName});
+            this.setState({coverageName: parsed.coverageName});
+            this.setState({coverageTerm: parsed.coverageTerm});
+            this.setState({parsedData: parsed});
+      }
+      catch(error) {
+        alert(error);
+      }
+  }
+
+
+
+//   importData =  () => Promise.all(AsyncStorage.getAllKeys().then(keys => {
+//     for (var i = 0; i < keys.length; i++) {
+//         let parsed = await AsyncStorage.getItem
+//     }
+//   }))
+
   render() {
+    //this.getAllKeys();
+    //console.log(this.state.keys);
+    console.log(this.props);
+    
     return (
         <View style={styles.formContainer}>
             <Text style={styles.fieldTitles}>Saved Illustrations</Text>
             <View style={styles.field}>
-                <CheckBox
-                    checkedIcon='dot-circle-o'
-                    uncheckedIcon='circle-o'
-                    checked={this.state.checked}
-                />
-                <Text style={styles.titleCoverage}>CPP Deferred Plan</Text>
-                <Text style={styles.titleCoverage}>Jane Does</Text>
-                <Text style={styles.titleCoverage}>September 26, 2018</Text>
+                <TouchableOpacity style={styles.illustratorButton} onPress={() => this.props.navigation.navigate('SavedIllustrations', {initialState: this.state.parsedData})}>
+                    <Text>{this.state.firstName} {this.state.lastName} {this.state.coverageName}</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.field}>
+                <TouchableOpacity style={styles.illustratorButton}>
+                    <Text>Ali Ababwa CPP Deferred Elite 10 Year Term</Text>
+                </TouchableOpacity>
+            </View>
+            <View style={styles.field}>
+                <TouchableOpacity style={styles.illustratorButton}>
+                    <Text>Snow White CPP Deferred Life</Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
@@ -31,15 +107,6 @@ class SelectionList extends Component {
 
 function mapStateToProps(state) {
     return {
-        firstName: state.firstName,
-        lastName: state.lastName,
-        DOB: state.DOB,
-        ageNearest: state.ageNearest,
-        gender: state.gender,
-        smoker: state.smoker,
-        advisorName: state.advisorName,
-        advisorPhoneNumber: state.advisorPhoneNumber,
-        advisorEmail: state.advisorEmail
     }
 }
 
@@ -64,7 +131,8 @@ const styles = StyleSheet.create({
         padding: 0,
         margin: 0,
         width: '95%',
-        marginTop: 10
+        marginTop: 10,
+        marginBottom: 10
     },
     field: {
         flex: 1,
@@ -126,5 +194,13 @@ const styles = StyleSheet.create({
         paddingTop: 3,
         paddingBottom: 3,
         marginTop: 3
+    },
+    illustratorButton: {
+        flex: 1,
+        backgroundColor: '#ecf0f1',
+        alignItems: 'center',
+        padding: 10,
+        marginBottom: 10,
+        borderWidth: 1
     }
 })
