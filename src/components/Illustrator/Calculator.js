@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Picker, StyleSheet, TextInput } from 'react-native';
 import { connect } from 'react-redux';
+import I18n from '../../i18n/i18n';
 
 class Calculator extends Component {
 
@@ -33,16 +34,24 @@ class Calculator extends Component {
                                     this.props.passTotalPremium(responseJson.totalPremiums.monthlyPremiumsCents);
                                 }
                             }
+                            else if (this.props.riders.rider1) {
+                                if (this.props.riders.rider1.option && this.props.riders.rider1.riderType && this.props.riders.rider1.faceAmount === '30000') {
+                                    this.props.passPlanBasePremium(responseJson.basePremiums.monthlyPremiumsCents);
+                                    this.props.passTotalPremium(responseJson.totalPremiums.monthlyPremiumsCents);
+                                }
+                            }
                             else {
                                 this.props.passPlanBasePremium(responseJson.basePremiums.monthlyPremiumsCents);
                                 this.props.passTotalPremium(responseJson.totalPremiums.monthlyPremiumsCents);
                             }
-
                             if (this.props.riders.rider1) {
-                                this.props.passRider1Premium(responseJson.riderPremiums.rider1.monthlyPremiumsCents);
-                            }
+                                if (this.props.riders.rider1.option && this.props.riders.rider1.riderType && this.props.riders.rider1.faceAmount === '30000') {
+                                    this.props.passRider1Premium(responseJson.riderPremiums.rider1.monthlyPremiumsCents);
+                                }                            }
                             if (this.props.riders.rider2) {
-                                this.props.passRider2Premium(responseJson.riderPremiums.rider2.monthlyPremiumsCents);
+                                if (this.props.riders.rider2.option && this.props.riders.rider2.riderType && this.props.riders.rider2.faceAmount === '30000') {
+                                    this.props.passRider2Premium(responseJson.riderPremiums.rider2.monthlyPremiumsCents);
+                                }
                             }
                             if (this.props.riders.accDeath) {
                                 if (this.props.riders.accDeath.faceAmount === '50000') {
@@ -119,10 +128,14 @@ class Calculator extends Component {
                             }
 
                             if (this.props.riders.rider1) {
-                                this.props.passRider1Premium(responseJson.riderPremiums.rider1.monthlyPremiumsCents);
+                                if (this.props.riders.rider1.option && this.props.riders.rider1.riderType && this.props.riders.rider1.faceAmount === '30000') {
+                                    this.props.passRider1Premium(responseJson.riderPremiums.rider1.monthlyPremiumsCents);
+                                }
                             }
                             if (this.props.riders.rider2) {
-                                this.props.passRider2Premium(responseJson.riderPremiums.rider2.monthlyPremiumsCents);
+                                if (this.props.riders.rider2.option && this.props.riders.rider2.riderType && this.props.riders.rider2.faceAmount === '30000') {
+                                    this.props.passRider2Premium(responseJson.riderPremiums.rider2.monthlyPremiumsCents);
+                                }
                             }
                             if (this.props.riders.accDeath) {
                                 if (this.props.riders.accDeath.faceAmount === '50000') {
@@ -176,29 +189,40 @@ class Calculator extends Component {
 
     render() {
         this.fetchApiData();
+        console.log("PROPS", this.props)
         return (
             <View style={styles.formContainer}>
                 <View style={styles.field}>
-                    <Text style={{ alignSelf: 'center' }}>Mode of Payment</Text>
+                    <Text style={{ alignSelf: 'center' }}>{I18n.t('modeOfPayment')}</Text>
                     <View style={{ backgroundColor: '#ecf0f1', marginTop: 10, marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.modeOfPayment}
                             style={{ height: 30, width: 207 }}
                             onValueChange={(itemValue) => this.props.changeModeOfPayment(itemValue)}>
-                            <Picker.Item label="Monthly" value="monthly-payment" />
-                            <Picker.Item label="Annual" value="annual-payment" />
+                            <Picker.Item label={I18n.t('monthly')} value="monthly-payment" />
+                            <Picker.Item label={I18n.t('annual')} value="annual-payment" />
                         </Picker>
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text style={styles.titleCoverage}>Coverage</Text>
-                    <Text style={styles.titleFaceAmount}>Face Amount</Text>
-                    <Text style={styles.titlePremiums}>Premiums</Text>
+                    <Text style={styles.titleCoverage}>{I18n.t('coverage')}</Text>
+                    <Text style={styles.titleFaceAmount}>{I18n.t('faceAmount')}</Text>
+                    <Text style={styles.titlePremiums}>{I18n.t('premiums')}</Text>
                 </View>
                 <View style={styles.field}>
                     <Text style={styles.titleCoverage}>{this.props.coverageName} {this.props.coverageTerm}</Text>
                     <Text style={styles.titleFaceAmount}>${this.props.faceAmount}</Text>
                     <Text style={styles.titlePremiums}>${this.props.basePremium}</Text>
+                </View>
+                <View style={styles.field}>
+                    {this.props.termRiderFaceAmount1 !== '' && this.props.termRider1Premium !== '' ? <Text style={styles.titleCoverage}>{this.props.coverageName} {this.props.rider1PlanName}</Text> : null}
+                    {this.props.termRiderFaceAmount1 !== '' && this.props.termRider1Premium !== '' ? <Text style={styles.titleFaceAmount}>${this.props.termRiderFaceAmount1}</Text> : null}
+                    {this.props.termRiderFaceAmount1 !== '' && this.props.termRider1Premium !== '' ? <Text style={styles.titlePremiums}>${this.props.termRider1Premium}</Text> : null}
+                </View>
+                <View style={styles.field}>
+                    {this.props.termRiderFaceAmount2 !== '' && this.props.termRider2Premium !== '' ? <Text style={styles.titleCoverage}>{this.props.coverageName} {this.props.rider2PlanName}</Text> : null}
+                    {this.props.termRiderFaceAmount2 !== '' && this.props.termRider2Premium !== '' ? <Text style={styles.titleFaceAmount}>${this.props.termRiderFaceAmount2}</Text> : null}
+                    {this.props.termRiderFaceAmount2 !== '' && this.props.termRider2Premium !== '' ? <Text style={styles.titlePremiums}>${this.props.termRider2Premium}</Text> : null}
                 </View>
                 <View style={styles.field}>
                     {this.props.accidentalDeath !== '' && this.props.accidentalDeathPremium !== '' ? <Text style={styles.titleCoverage}>Accidental Death</Text> : null}
@@ -211,22 +235,12 @@ class Calculator extends Component {
                     {this.props.childTermBenefit !== '' && this.props.childTermBenefitPremium !== '' ? <Text style={styles.titlePremiums}>${this.props.childTermBenefitPremium}</Text> : null}
                 </View>
                 <View style={styles.field}>
-                    {this.props.termRiderFaceAmount1 !== '' && this.props.termRider1Premium !== '' ? <Text style={styles.titleCoverage}>Term Rider 1</Text> : null}
-                    {this.props.termRiderFaceAmount1 !== '' && this.props.termRider1Premium !== '' ? <Text style={styles.titleFaceAmount}>${this.props.termRiderFaceAmount1}</Text> : null}
-                    {this.props.termRiderFaceAmount1 !== '' && this.props.termRider1Premium !== '' ? <Text style={styles.titlePremiums}>${this.props.termRider1Premium}</Text> : null}
-                </View>
-                <View style={styles.field}>
-                    {this.props.termRiderFaceAmount2 !== '' && this.props.termRider2Premium !== '' ? <Text style={styles.titleCoverage}>Term Rider 2</Text> : null}
-                    {this.props.termRiderFaceAmount2 !== '' && this.props.termRider2Premium !== '' ? <Text style={styles.titleFaceAmount}>${this.props.termRiderFaceAmount2}</Text> : null}
-                    {this.props.termRiderFaceAmount2 !== '' && this.props.termRider2Premium !== '' ? <Text style={styles.titlePremiums}>${this.props.termRider2Premium}</Text> : null}
-                </View>
-                <View style={styles.field}>
                     {this.props.hospitalCash !== '' && this.props.hospitalCashPremium !== '' ? <Text style={styles.titleCoverage}>Hospital Cash</Text> : null}
                     {this.props.hospitalCash !== '' && this.props.hospitalCashPremium !== '' ? <Text style={styles.titleFaceAmount}>{this.props.hospitalCashName}</Text> : null}
                     {this.props.hospitalCash !== '' && this.props.hospitalCashPremium !== '' ? <Text style={styles.titlePremiums}>${this.props.hospitalCashPremium}</Text> : null}
                 </View>
                 <View style={styles.field}>
-                    <Text style={styles.titleCoverageBottom}>Total Premiums</Text>
+                    <Text style={styles.titleCoverageBottom}>{I18n.t('totalPremiums')}</Text>
                     <Text style={styles.totalPremiumBottom}>${this.props.totalPremium}</Text>
                 </View>
             </View>
@@ -265,7 +279,10 @@ function mapStateToProps(state) {
         coverageName: state.coverageName,
         coverageTerm: state.coverageTerm,
         childTermBenefitName: state.childTermBenefitName,
-        hospitalCashName: state.hospitalCashName
+        hospitalCashName: state.hospitalCashName,
+        rider1PlanName: state.rider1PlanName,
+        rider2PlanName: state.rider2PlanName,
+        language: state.language
     }
 }
 

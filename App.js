@@ -3,6 +3,7 @@ import { AppRegistry, Image, StyleSheet, View, Text, TextInput, ScrollView } fro
 import { createStackNavigator } from 'react-navigation';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
+import I18n from 'react-native-i18n';
 
 import NewIllustrator from './src/components/Illustrator/NewIllustrator';
 import IllustrationSelection from './src/components/Illustrator/IllustrationSelection';
@@ -32,8 +33,10 @@ const initialState = {
   desiredFaceAmount: '',
   termRiderPlan1: '',
   termRiderFaceAmount1: '',
+  rider1PlanName: '',
   termRiderPlan2: '',
   termRiderFaceAmount2: '',
+  rider2PlanName: '',
   hospitalCash: '',
   accidentalDeath: '',
   childTermBenefit: '',
@@ -44,7 +47,8 @@ const initialState = {
   termRider1Premium: '',
   termRider2Premium: '',
   hospitalCashName: '',
-  childTermBenefitName: ''
+  childTermBenefitName: '',
+  language: 'en'
 }
 
 const reducer = (state = initialState, action) => {
@@ -251,25 +255,107 @@ const reducer = (state = initialState, action) => {
         faceAmount: action.payload
       }
     case 'UPDATE_TERM_RIDER_PLAN_1':
-      return {
-        ...state,
-        termRiderPlan1: action.payload
+      if (action.payload === 'LEVEL_TEN') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan1: action.payload,
+            rider1PlanName: '10 Year Term Rider',
+            riders: { ...state.riders, rider1: { riderType: 'TERM', option: action.payload } }
+          }
+        }
       }
+      else if (action.payload === 'LEVEL_TWENTY') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan1: action.payload,
+            rider1PlanName: '20 Year Term Rider',
+            riders: { ...state.riders, rider1: { riderType: 'TERM', option: action.payload } }
+          }
+        }
+      }
+      else if (action.payload === 'LEVEL_TWENTYFIVE') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan1: action.payload,
+            rider1PlanName: '25 Year Term Rider',
+            riders: { ...state.riders, rider1: { riderType: 'TERM', option: action.payload } }
+          }
+        }
+      }
+      else if (action.payload === 'DECREASING_TWENTYFIVE') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan1: action.payload,
+            rider1PlanName: 'Decreasing 25 Year Term Rider',
+            riders: { ...state.riders, rider1: { riderType: 'TERM', option: action.payload } }
+          }
+        }
+      }
+      return { ...state, termRiderPlan1: action.payload, rider1PlanName: '' }
     case 'UPDATE_TERM_RIDER_PLAN_2':
-      return {
-        ...state,
-        termRiderPlan2: action.payload
+      if (action.payload === 'LEVEL_TEN') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan2: action.payload,
+            rider2PlanName: '10 Year Term Rider',
+            riders: { ...state.riders, rider2: { riderType: 'TERM', option: action.payload } }
+          }
+        }
       }
+      else if (action.payload === 'LEVEL_TWENTY') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan2: action.payload,
+            rider2PlanName: '20 Year Term Rider',
+            riders: { ...state.riders, rider2: { riderType: 'TERM', option: action.payload } }
+          }
+        }
+      }
+      else if (action.payload === 'LEVEL_TWENTYFIVE') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan2: action.payload,
+            rider2PlanName: '25 Year Term Rider',
+            riders: { ...state.riders, rider2: { riderType: 'TERM', option: action.payload } }
+          }
+        }
+      }
+      else if (action.payload === 'DECREASING_TWENTYFIVE') {
+        if (action.payload !== '') {
+          return {
+            ...state,
+            termRiderPlan2: action.payload,
+            rider2PlanName: 'Decreasing 25 Year Term',
+            riders: { ...state.riders, rider2: { riderType: 'TERM', option: action.payload } }
+          }
+        }
+      }
+      return { ...state, termRiderPlan2: action.payload, rider2PlanName: '' }
     case 'UPDATE_TERM_RIDER_FACE_AMOUNT_1':
-      return {
-        ...state,
-        termRiderFaceAmount1: action.payload
+      if (action.payload !== '') {
+        return {
+          ...state,
+          termRiderFaceAmount1: action.payload,
+          riders: { ...state.riders, rider1: { ...state.riders.rider1, faceAmount: action.payload } }
+        }
       }
+      return { ...state, termRiderFaceAmount1: action.payload }
     case 'UPDATE_TERM_RIDER_FACE_AMOUNT_2':
-      return {
-        ...state,
-        termRiderFaceAmount2: action.payload
+      if (action.payload !== '') {
+        return {
+          ...state,
+          termRiderFaceAmount2: action.payload,
+          riders: { ...state.riders, rider2: { ...state.riders.rider2, faceAmount: action.payload } }
+        }
       }
+      return { ...state, termRiderFaceAmount2: action.payload }
     case 'UPDATE_RIDER1_PREMIUM':
       return {
         ...state,
@@ -367,6 +453,19 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         childTermBenefitPremium: action.payload / 100
+      }
+    case 'CHANGE_LANGUAGE':
+      if (action.payload === 'en') {
+        I18n.locale = action.payload
+        return {
+          ...state, language: 'en'
+        }
+      }
+      else if (action.payload === 'fr') {
+        I18n.locale = action.payload
+        return {
+          ...state, language: 'fr'
+        }
       }
   }
   return state

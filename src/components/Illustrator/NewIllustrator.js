@@ -14,10 +14,48 @@ import OptionalBenefitRiders from './OptionalBenefitRiders';
 import Calculator from './Calculator';
 import Update from './Update';
 
-export default class NewIllustrator extends Component {
+class NewIllustrator extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            defaultState: {
+                modeOfPayment: 'monthly-payment',
+                coverageName: 'n/a',
+                coverageTerm: '',
+                faceAmount: '0.00',
+                basePremium: '0.00',
+                totalPremium: '0.00',
+                firstName: '',
+                lastName: '',
+                DOB: '',
+                ageNearest: '',
+                gender: '',
+                smoker: '',
+                advisorName: '',
+                advisorPhoneNumber: '',
+                advisorEmail: '',
+                planTypeSelected: 'term-insurance',
+                termPlan: '',
+                permanentPlan: '',
+                termPeriod: '',
+                permanentPeriod: '',
+                desiredFaceAmount: '',
+                termRiderPlan1: '',
+                termRiderFaceAmount1: '',
+                termRiderPlan2: '',
+                termRiderFaceAmount2: '',
+                hospitalCash: '',
+                accidentalDeath: '',
+                childTermBenefit: '',
+                riders: {},
+                accidentalDeathPremium: '',
+                childTermBenefitPremium: '',
+                hospitalCashPremium: '',
+                termRider1Premium: '',
+                termRider2Premium: '',
+                hospitalCashName: '',
+                childTermBenefitName: ''
+            }
         }
     }
 
@@ -25,9 +63,9 @@ export default class NewIllustrator extends Component {
         header: null
     };
 
-    // componentDidMount() {
-    //     this.props.passData(this.props.navigation.getParam('initialState', {}));
-    // }
+    componentDidMount() {
+        this.props.passData(this.props.navigation.getParam('initialState', this.state.defaultState));
+    }
 
     render() {
         return (
@@ -45,13 +83,24 @@ export default class NewIllustrator extends Component {
     }
 }
 
-// function mapDispatchToProps(dispatch) {
-//     return {
-//         passData: (itemValue) => dispatch({ type: 'UPDATE_DATA', payload: itemValue })
-//     }
-// }
+function mapStateToProps(state) {
+    return {
+        planTypeSelected: state.planTypeSelected,
+        termPlan: state.termPlan,
+        permanentPlan: state.permanentPlan,
+        termPeriod: state.termPeriod,
+        permanentPeriod: state.permanentPeriod,
+        desiredFaceAmount: state.desiredFaceAmount
+    }
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(NewIllustrator)
+function mapDispatchToProps(dispatch) {
+    return {
+        passData: (itemValue) => dispatch({ type: 'UPDATE_DATA', payload: itemValue })
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(NewIllustrator)
 
 const styles = StyleSheet.create({
     container: {

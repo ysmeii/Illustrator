@@ -44,10 +44,10 @@ class TermRiders extends Component {
                             style={{ height: 30, width: 245}}
                             onValueChange={(itemValue) => this.props.changeTermRiderPlan1(itemValue)}>
                             <Picker.Item label="---------------" value="" />
-                            <Picker.Item label="10 Year Term" value="10yearterm" />
-                            <Picker.Item label="20 Year Term" value="20yearterm" />
-                            <Picker.Item label="25 Year Term" value="25yearterm" />
-                            <Picker.Item label="Decreasing 25 Year Term" value="decr25yearterm" />
+                            <Picker.Item label="10 Year Term" value="LEVEL_TEN" />
+                            <Picker.Item label="20 Year Term" value="LEVEL_TWENTY" />
+                            <Picker.Item label="25 Year Term" value="LEVEL_TWENTYFIVE" />
+                            <Picker.Item label="Decreasing 25 Year Term" value="DECREASING_TWENTYFIVE" />
                         </Picker>
                     </View>
                     <TextInput 
@@ -65,10 +65,10 @@ class TermRiders extends Component {
                             style={{ height: 30, width: 245}}
                             onValueChange={(itemValue) => this.props.changeTermRiderPlan2(itemValue)}>
                             <Picker.Item label="---------------" value="" />
-                            <Picker.Item label="10 Year Term" value="10yearterm" />
-                            <Picker.Item label="20 Year Term" value="20yearterm" />
-                            <Picker.Item label="25 Year Term" value="25yearterm" />
-                            <Picker.Item label="Decreasing 25 Year Term" value="decr25yearterm" />
+                            <Picker.Item label="10 Year Term" value="LEVEL_TEN" />
+                            <Picker.Item label="20 Year Term" value="LEVEL_TWENTY" />
+                            <Picker.Item label="25 Year Term" value="LEVEL_TWENTYFIVE" />
+                            <Picker.Item label="Decreasing 25 Year Term" value="DECREASING_TWENTYFIVE" />
                         </Picker>
                     </View>
                     <TextInput 
