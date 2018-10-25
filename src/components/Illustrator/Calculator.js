@@ -192,22 +192,22 @@ class Calculator extends Component {
         console.log("PROPS", this.props)
         return (
             <View style={styles.formContainer}>
-                <View style={styles.field}>
+                {/* <View style={styles.field}>
                     <Text style={{ alignSelf: 'center' }}>{I18n.t('modeOfPayment')}</Text>
                     <View style={{ backgroundColor: '#ecf0f1', marginTop: 10, marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.modeOfPayment}
-                            style={{ height: 30, width: 207 }}
+                            style={{ height: 40, width: 207 }}
                             onValueChange={(itemValue) => this.props.changeModeOfPayment(itemValue)}>
                             <Picker.Item label={I18n.t('monthly')} value="monthly-payment" />
                             <Picker.Item label={I18n.t('annual')} value="annual-payment" />
                         </Picker>
                     </View>
-                </View>
+                </View> */}
                 <View style={styles.field}>
-                    <Text style={styles.titleCoverage}>{I18n.t('coverage')}</Text>
-                    <Text style={styles.titleFaceAmount}>{I18n.t('faceAmount')}</Text>
-                    <Text style={styles.titlePremiums}>{I18n.t('premiums')}</Text>
+                    <Text style={styles.titleCoverageTop}>{I18n.t('coverage')}</Text>
+                    <Text style={styles.titleFaceAmountTop}>{I18n.t('faceAmount')}</Text>
+                    <Text style={styles.titlePremiumsTop}>{I18n.t('premiums')}</Text>
                 </View>
                 <View style={styles.field}>
                     <Text style={styles.titleCoverage}>{this.props.coverageName} {this.props.coverageTerm}</Text>
@@ -250,6 +250,7 @@ class Calculator extends Component {
 
 function mapStateToProps(state) {
     return {
+        calculatorType: state.calculatorType,
         modeOfPayment: state.modeOfPayment,
         faceAmount: state.faceAmount,
         basePremium: state.basePremium,
@@ -328,6 +329,16 @@ const styles = StyleSheet.create({
         paddingTop: 3,
         paddingBottom: 3
     },
+    titleCoverageTop: {
+        textAlignVertical: 'center',
+        textAlign: 'center',
+        backgroundColor: '#2980b9',
+        marginBottom: 5,
+        width: 200,
+        paddingTop: 3,
+        paddingBottom: 3,
+        marginTop: 10
+    },
     titleCoverageBottom: {
         textAlignVertical: 'center',
         textAlign: 'center',
@@ -347,6 +358,16 @@ const styles = StyleSheet.create({
         paddingTop: 3,
         paddingBottom: 3
     },
+    titleFaceAmountTop: {
+        textAlignVertical: 'center',
+        textAlign: 'center',
+        backgroundColor: '#2980b9',
+        marginBottom: 5,
+        width: 80,
+        paddingTop: 3,
+        paddingBottom: 3,
+        marginTop: 10
+    },
     titlePremiums: {
         textAlign: 'center',
         textAlignVertical: 'center',
@@ -355,6 +376,16 @@ const styles = StyleSheet.create({
         width: 80,
         paddingTop: 3,
         paddingBottom: 3
+    },
+    titlePremiumsTop: {
+        textAlign: 'center',
+        textAlignVertical: 'center',
+        backgroundColor: '#2980b9',
+        marginBottom: 5,
+        width: 80,
+        paddingTop: 3,
+        paddingBottom: 3,
+        marginTop: 10
     },
     totalPremium: {
         textAlign: 'center',

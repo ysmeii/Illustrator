@@ -77,23 +77,30 @@ class SelectionList extends Component {
     //     }
     //   }))
 
+    changePage() {
+        this.props.navigation.navigate('NewIllustrator');
+        this.props.passData(this.state.parsedData);
+    }
+
+    //this.props.navigation.navigate('NewIllustrator', { initialState: this.state.parsedData })
+
     render() {
         return (
             <View style={styles.formContainer}>
                 <Text style={styles.fieldTitles}>Saved Illustrations</Text>
                 <View style={styles.field}>
-                    <TouchableOpacity style={styles.illustratorButton} onPress={() => this.props.navigation.navigate('SavedIllustrations', { initialState: this.state.parsedData })}>
+                    <TouchableOpacity style={styles.illustratorButton} onPress={() => this.changePage()}>
                         <Text>{this.state.firstName} {this.state.lastName} {this.state.coverageName}</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.field}>
                     <TouchableOpacity style={styles.illustratorButton}>
-                        <Text>Ali Ababwa CPP Deferred Elite 10 Year Term</Text>
+                        <Text>Joe Flacco CPP Deferred Elite 10 Year Term</Text>
                     </TouchableOpacity>
                 </View>
                 <View style={styles.field}>
                     <TouchableOpacity style={styles.illustratorButton}>
-                        <Text>Snow White CPP Deferred Life</Text>
+                        <Text>Patrick Mahomes CPP Deferred Life</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -108,6 +115,7 @@ function mapStateToProps(state) {
 
 function mapDispatchToProps(dispatch) {
     return {
+        passData: (itemValue) => dispatch({ type: 'UPDATE_DATA', payload: itemValue })
     }
 }
 
@@ -116,7 +124,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(SelectionList)
 const styles = StyleSheet.create({
     fieldTitles: {
         margin: 10,
-        fontSize: 20
+        fontSize: 23
     },
     formContainer: {
         flex: 1,
@@ -127,7 +135,7 @@ const styles = StyleSheet.create({
         padding: 0,
         margin: 0,
         width: '95%',
-        marginTop: 10,
+        marginTop: 0,
         marginBottom: 10
     },
     field: {

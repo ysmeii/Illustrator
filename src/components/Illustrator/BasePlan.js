@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, Picker, StyleSheet, TextInput } from 'react-native';
 import { connect } from 'react-redux';
+import I18n from '../../i18n/i18n';
 
 class BasePlan extends Component {
   constructor(props) {
@@ -10,30 +11,30 @@ class BasePlan extends Component {
   }
 
   render() {
-    if (this.props.planTypeSelected === 'term-insurance') {
+    if (this.props.planTypeSelected === 'term-insurance' && this.props.calculatorType === 'premiums') {
         return (
             <View style={styles.formContainer}>
-                <Text style={styles.fieldTitles}>Base Plan</Text>
+                <Text style={styles.fieldTitles}>{I18n.t('basePlan')}</Text>
                 <View style={styles.field}>
-                    <Text>Plan Type</Text>
+                    <Text>{I18n.t('planType')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                     <Picker
                         selectedValue={this.props.planTypeSelected}
-                        style={{ height: 30, width: 250}}
+                        style={{ height: 40, width: 250}}
                         onValueChange={(itemValue) => this.props.changePlanTypeSelected(itemValue)}>
-                        <Picker.Item label="Term Insurance" value="term-insurance" />
-                        <Picker.Item label="Permanent Insurance" value="permanent-insurance" />
+                        <Picker.Item label={I18n.t('termInsurance')} value="term-insurance" />
+                        <Picker.Item label={I18n.t('permanentInsurance')} value="permanent-insurance" />
                     </Picker>
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Plan</Text>
+                    <Text>{I18n.t('plan')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                     <Picker
                         selectedValue={this.props.termPlan}
-                        style={{ height: 30, width: 250}}
+                        style={{ height: 40, width: 250}}
                         onValueChange={(itemValue) => this.props.changeTermPlan(itemValue)}>
-                        <Picker.Item label="Select an option" value="" />
+                        <Picker.Item label={I18n.t('selectOption')} value="" />
                         <Picker.Item label="CPP Deferred Elite Term" value="CPP_DEFERRED_ELITE_TERM" />
                         <Picker.Item label="CPP Simplified Elite Term" value="CPP_SIMPLIFIED_ELITE_TERM" />
                         <Picker.Item label="CPP Preferred Term" value="CPP_PREFERRED_TERM" />
@@ -42,13 +43,13 @@ class BasePlan extends Component {
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Term</Text>
+                    <Text>{I18n.t('term')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                     <Picker
                         selectedValue={this.props.termPeriod}
-                        style={{ height: 30, width: 250}}
+                        style={{ height: 40, width: 250}}
                         onValueChange={(itemValue) => this.props.changeTermPeriod(itemValue)}>
-                        <Picker.Item label="Select an option" value="" />
+                        <Picker.Item label={I18n.t('selectOption')} value="" />
                         <Picker.Item label="10 Year Term" value="LEVEL_TEN" />
                         <Picker.Item label="20 Year Term" value="LEVEL_TWENTY" />
                         <Picker.Item label="25 Year Term" value="LEVEL_TWENTYFIVE" />
@@ -57,7 +58,7 @@ class BasePlan extends Component {
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Desired Face{"\n"}Amount</Text>
+                    <Text>{I18n.t('desiredFaceAmount')}</Text>
                     <TextInput 
                         underlineColorAndroid='transparent' 
                         style={styles.input} 
@@ -69,32 +70,32 @@ class BasePlan extends Component {
             </View>
         );
     }
-    else {
+    else if (this.props.calculatorType === 'premiums') {
         if (this.props.permanentPlan === 'CPP_GUARANTEED_ACCEPTANCE_LIFE' || this.props.permanentPlan === 'CPP_DEFERRED_LIFE' || this.props.permanentPlan === 'CPP_DEFERRED_ELITE_LIFE_100' 
         || this.props.permanentPlan === 'CPP_SIMPLIFIED_ELITE_LIFE_100' || this.props.permanentPlan === 'CPP_PREFERRED_LIFE_100' || this.props.permanentPlan === 'CPP_PREFERRED_ELITE_LIFE_100') {
             return (
                 <View style={styles.formContainer}>
-                    <Text style={styles.fieldTitles}>Base Plan</Text>
+                    <Text style={styles.fieldTitles}>{I18n.t('basePlan')}</Text>
                     <View style={styles.field}>
-                        <Text>Plan Type</Text>
+                        <Text>{I18n.t('planType')}</Text>
                         <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.planTypeSelected}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changePlanTypeSelected(itemValue)}>
-                            <Picker.Item label="Term Insurance" value="term-insurance" />
-                            <Picker.Item label="Permanent Insurance" value="permanent-insurance" />
+                            <Picker.Item label={I18n.t('termInsurance')} value="term-insurance" />
+                            <Picker.Item label={I18n.t('permanentInsurance')} value="permanent-insurance" />
                         </Picker>
                         </View>
                     </View>
                     <View style={styles.field}>
-                        <Text>Plan</Text>
+                        <Text>{I18n.t('plan')}</Text>
                         <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.permanentPlan}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changePermanentPlan(itemValue)}>
-                            <Picker.Item label="Select an option" value="" />
+                            <Picker.Item label={I18n.t('selectOption')} value="" />
                             <Picker.Item label="CPP Guaranteed Acceptance Life" value="CPP_GUARANTEED_ACCEPTANCE_LIFE" />
                             <Picker.Item label="CPP Deferred Life" value="CPP_DEFERRED_LIFE" />
                             <Picker.Item label="CPP Deferred Elite Life" value="CPP_DEFERRED_ELITE_LIFE" />
@@ -109,18 +110,18 @@ class BasePlan extends Component {
                         </View>
                     </View>
                     <View style={styles.field}>
-                        <Text>Payment Period</Text>
+                        <Text>{I18n.t('paymentPeriod')}</Text>
                         <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.permanentPeriod}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changePermanentPeriod(itemValue)}>
                             <Picker.Item label="Pay to Age 100" value="LIFE_PAY" />
                         </Picker>
                         </View>
                     </View>
                     <View style={styles.field}>
-                        <Text>Desired Face{"\n"}Amount</Text>
+                        <Text>{I18n.t('desiredFaceAmount')}</Text>
                         <TextInput 
                             underlineColorAndroid='transparent' 
                             style={styles.input} 
@@ -135,13 +136,13 @@ class BasePlan extends Component {
         else {
             return (
                 <View style={styles.formContainer}>
-                    <Text style={styles.fieldTitles}>Base Plan</Text>
+                    <Text style={styles.fieldTitles}>{I18n.t('basePlan')}</Text>
                     <View style={styles.field}>
-                        <Text>Plan Type</Text>
+                        <Text>{I18n.t('planType')}</Text>
                         <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.planTypeSelected}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changePlanTypeSelected(itemValue)}>
                             <Picker.Item label="Term Insurance" value="term-insurance" />
                             <Picker.Item label="Permanent Insurance" value="permanent-insurance" />
@@ -149,11 +150,11 @@ class BasePlan extends Component {
                         </View>
                     </View>
                     <View style={styles.field}>
-                        <Text>Plan</Text>
+                        <Text>{I18n.t('plan')}</Text>
                         <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.permanentPlan}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changePermanentPlan(itemValue)}>
                             <Picker.Item label="Select an option" value="" />
                             <Picker.Item label="CPP Guaranteed Acceptance Life" value="CPP_GUARANTEED_ACCEPTANCE_LIFE" />
@@ -170,20 +171,20 @@ class BasePlan extends Component {
                         </View>
                     </View>
                     <View style={styles.field}>
-                        <Text>Payment Period</Text>
+                        <Text>{I18n.t('paymentPeriod')}</Text>
                         <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.permanentPeriod}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changePermanentPeriod(itemValue)}>
-                            <Picker.Item label="Select an option" value="" />
+                            <Picker.Item label={I18n.t('selectOption')} value="" />
                             <Picker.Item label="Pay to Age 100" value="LIFE_PAY" />
                             <Picker.Item label="20 Pay" value="TWENTY_PAY" />
                         </Picker>
                         </View>
                     </View>
                     <View style={styles.field}>
-                        <Text>Desired Face{"\n"}Amount</Text>
+                        <Text>{I18n.t('desiredFaceAmount')}</Text>
                         <TextInput 
                             underlineColorAndroid='transparent' 
                             style={styles.input} 
@@ -196,6 +197,65 @@ class BasePlan extends Component {
             );
         }    
     }
+    else {
+        return (
+            <View style={styles.formContainer}>
+                <Text style={styles.fieldTitles}>{I18n.t('basePlan')}</Text>
+                <View style={styles.field}>
+                    <Text>{I18n.t('planType')}</Text>
+                    <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
+                    <Picker
+                        selectedValue={this.props.planTypeSelected}
+                        style={{ height: 40, width: 250}}
+                        onValueChange={(itemValue) => this.props.changePlanTypeSelected(itemValue)}>
+                        <Picker.Item label={I18n.t('termInsurance')} value="term-insurance" />
+                        <Picker.Item label={I18n.t('permanentInsurance')} value="permanent-insurance" />
+                    </Picker>
+                    </View>
+                </View>
+                <View style={styles.field}>
+                    <Text>{I18n.t('plan')}</Text>
+                    <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
+                    <Picker
+                        selectedValue={this.props.termPlan}
+                        style={{ height: 40, width: 250}}
+                        onValueChange={(itemValue) => this.props.changeTermPlan(itemValue)}>
+                        <Picker.Item label={I18n.t('selectOption')} value="" />
+                        <Picker.Item label="CPP Deferred Elite Term" value="CPP_DEFERRED_ELITE_TERM" />
+                        <Picker.Item label="CPP Simplified Elite Term" value="CPP_SIMPLIFIED_ELITE_TERM" />
+                        <Picker.Item label="CPP Preferred Term" value="CPP_PREFERRED_TERM" />
+                        <Picker.Item label="CPP Preferred Elite Term" value="CPP_PREFERRED_ELITE_TERM" />
+                    </Picker>
+                    </View>
+                </View>
+                <View style={styles.field}>
+                    <Text>{I18n.t('term')}</Text>
+                    <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
+                    <Picker
+                        selectedValue={this.props.termPeriod}
+                        style={{ height: 40, width: 250}}
+                        onValueChange={(itemValue) => this.props.changeTermPeriod(itemValue)}>
+                        <Picker.Item label={I18n.t('selectOption')} value="" />
+                        <Picker.Item label="10 Year Term" value="LEVEL_TEN" />
+                        <Picker.Item label="20 Year Term" value="LEVEL_TWENTY" />
+                        <Picker.Item label="25 Year Term" value="LEVEL_TWENTYFIVE" />
+                        <Picker.Item label="Decreasing 25 Year Term" value="DECREASING_TWENTYFIVE" />
+                    </Picker>
+                    </View>
+                </View>
+                <View style={styles.field}>
+                    <Text>{I18n.t('monthlyPremiums')}</Text>
+                    <TextInput 
+                        underlineColorAndroid='transparent' 
+                        style={styles.input} 
+                        placeholder='1000000'
+                        onChangeText={(text) => this.props.changeDesiredFaceAmount(text)}
+                        value={this.props.desiredFaceAmount}>
+                    </TextInput>
+                </View>
+            </View>
+        );
+    }
   }
 }
 
@@ -206,7 +266,9 @@ function mapStateToProps(state) {
         permanentPlan: state.permanentPlan,
         termPeriod: state.termPeriod,
         permanentPeriod: state.permanentPeriod,
-        desiredFaceAmount: state.desiredFaceAmount
+        desiredFaceAmount: state.desiredFaceAmount,
+        language: state.language,
+        calculatorType: state.calculatorType
     }
 }
 
@@ -225,7 +287,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(BasePlan)
 
 const styles = StyleSheet.create({
     input: {
-        height: 30,
+        height: 40,
         width: 250,
         backgroundColor: '#ecf0f1',
         paddingLeft: 8,
@@ -251,6 +313,6 @@ const styles = StyleSheet.create({
     },
     fieldTitles: {
         margin: 10, 
-        fontSize: 20
+        fontSize: 23
     }
 });

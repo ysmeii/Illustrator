@@ -32,7 +32,7 @@ class InsuredInformation extends Component {
                     </TextInput>
                 </View>
                 <View style={styles.field}>
-                    <Text>{I18n.t('DOB')}h</Text>
+                    <Text>{I18n.t('DOB')}</Text>
                     <TextInput
                         underlineColorAndroid='transparent'
                         style={styles.input}
@@ -55,11 +55,11 @@ class InsuredInformation extends Component {
                     <View style={{ backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.gender}
-                            style={{ height: 30, width: 250 }}
+                            style={{ height: 40, width: 250 }}
                             onValueChange={(itemValue) => this.props.changeGender(itemValue)}>
-                            <Picker.Item label="Select an option" value="" />
-                            <Picker.Item label="Male" value="MALE" />
-                            <Picker.Item label="Female" value="FEMALE" />
+                            <Picker.Item label={I18n.t('selectOption')} value="" />
+                            <Picker.Item label={I18n.t('male')} value="MALE" />
+                            <Picker.Item label={I18n.t('female')} value="FEMALE" />
                         </Picker>
                     </View>
                 </View>
@@ -68,11 +68,11 @@ class InsuredInformation extends Component {
                     <View style={{ backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.smoker}
-                            style={{ height: 30, width: 250 }}
+                            style={{ height: 40, width: 250 }}
                             onValueChange={(itemValue) => this.props.changeSmoker(itemValue)}>
-                            <Picker.Item label="Select an option" value="" />
-                            <Picker.Item label="Yes" value="SMOKER" />
-                            <Picker.Item label="No" value="NONSMOKER" />
+                            <Picker.Item label={I18n.t('selectOption')} value="" />
+                            <Picker.Item label={I18n.t('yes')} value="SMOKER" />
+                            <Picker.Item label={I18n.t('no')} value="NONSMOKER" />
                         </Picker>
                     </View>
                 </View>
@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
         width: '95%'
     },
     input: {
-        height: 30,
+        height: 40,
         width: 250,
         backgroundColor: '#ecf0f1',
         paddingLeft: 8,
@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
         alignItems: 'stretch'
     },
     inputDOB: {
-        height: 30,
+        height: 40,
         width: 60,
         backgroundColor: '#ecf0f1',
         padding: 10,
@@ -177,13 +177,13 @@ const styles = StyleSheet.create({
         flex: 1,
         flexDirection: 'row',
         width: 250,
-        height: 30,
+        height: 40,
         justifyContent: 'space-between',
         marginBottom: 10,
         marginLeft: 25
     },
     fieldTitles: {
         margin: 10,
-        fontSize: 20
+        fontSize: 23
     }
 })

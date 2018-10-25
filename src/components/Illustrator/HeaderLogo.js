@@ -21,7 +21,7 @@ class HeaderLogo extends Component {
                     <Picker.Item label="English" value="en" />
                     <Picker.Item label="Français" value="fr" />
                 </Picker>
-                <Text style={{ fontSize: 30, fontWeight: 'bold' }}>{I18n.t('illustrator')}</Text>
+                <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'black' }}>{I18n.t('illustrator')}</Text>
             </View>
         );
     }

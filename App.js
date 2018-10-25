@@ -7,10 +7,11 @@ import I18n from 'react-native-i18n';
 
 import NewIllustrator from './src/components/Illustrator/NewIllustrator';
 import IllustrationSelection from './src/components/Illustrator/IllustrationSelection';
-import SavedIllustrations from './src/components/Illustrator/SavedIllustrations';
+import BackwardsCalculator from './src/components/Illustrator/BackwardsCalculator';
 
 const initialState = {
   modeOfPayment: 'monthly-payment',
+  calculatorType: 'premiums',
   coverageName: 'n/a',
   coverageTerm: '',
   faceAmount: '0.00',
@@ -54,6 +55,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'UPDATE_DATA':
+    console.log("updating data", action.payload);
       return {
         ...state,
         modeOfPayment: action.payload.modeOfPayment,
@@ -93,6 +95,8 @@ const reducer = (state = initialState, action) => {
         hospitalCashName: action.payload.hospitalCashName,
         childTermBenefitName: action.payload.childTermBenefitName
       }
+    case 'CHANGE_CALCULATOR_TYPE':
+      return { ...state, calculatorType: action.payload }
     case 'UPDATE_BASE_PREMIUM':
       return { ...state, basePremium: action.payload / 100 }
     case 'UPDATE_TOTAL_PREMIUM':
@@ -476,7 +480,7 @@ const store = createStore(reducer)
 const AppStackNavigator = createStackNavigator({
   NewIllustrator: NewIllustrator,
   IllustrationSelection: IllustrationSelection,
-  SavedIllustrations: SavedIllustrations
+  BackwardsCalculator: BackwardsCalculator
 })
 
 export default class App extends Component {

@@ -1,8 +1,9 @@
 export default {
+    selectOption: 'Choisir une option',
     illustrator: 'Illustrateur',
     newIllustration: 'Nouvelle illustration',
     savedIllustrations: 'Illustrations sauvegardées',
-    review: 'Aperçu',
+    generate: 'Prouire',
     print: 'Imprimer',
     save: 'Enregistrer', 
     modeOfPayment: 'Mode de paiement',
@@ -26,11 +27,17 @@ export default {
     basePlan: 'Régime de base',
     planType: 'Type de régime',
     plan: 'Régime',
-    term: 'Période d’assurance temporaire',
-    desiredFaceAmount: 'Capital assuré désiré',
+    term: 'Période d’assurance\ntemporaire',
+    desiredFaceAmount: 'Capital assuré\ndésiré',
     termRiders: "Avenants d'assurance vie temporaire",
     optionalBenefitsRiders: 'Avenants de prestations facultatives',
-    hospitalCash: 'Prestation hospitalière',
-    accidentalDeath: 'Prestation de décès accidentel',
-    childTermBenefit: 'Prestation temporaire pour enfants'
+    hospitalCash: 'Prestation\nhospitalière',
+    accidentalDeath: 'Prestation de\ndécès accidentel',
+    childTermBenefit: 'Prestation temporaire\npour enfants',
+    male: 'Homme',
+    female: 'Femme',
+    yes: 'Oui',
+    no: 'Non',
+    termInsurance: 'Assurance vie temporaire',
+    permanentInsurance: 'Assurance vie entière'
 }

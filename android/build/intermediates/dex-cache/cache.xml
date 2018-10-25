@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_044cc1ad9f6d5dead8e11ef06ec275520c789542.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_7c677cd0ad60f14939bc6ff92e90236e9c8bf38a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/pkix/1.51.0.0/40a445852ca58187fc616e3a8b42de463bf14b8b/pkix-1.51.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="40a445852ca58187fc616e3a8b42de463bf14b8b">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/pkix-1.51.0.0_cc603103faf68409368c124e0bf482778336e3d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_fb215f01090fe91e437694258d7039d9c736ae54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_ed2a0ea84dd9d7e25d012d506401e114bf74c509.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_a179e3d07ed911b21747f7c815fcf3b51ad23330.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_ebb56ddc362b0a9e7ee10287c490901c8acfaa2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_da88f87763f49def10f4dd00175061453d830a45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_11af005d8ab32e8fe6baff6d12279b10ee360394.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/prov/1.51.0.0/6755081df770180856ca48694b40cd34c2208128/prov-1.51.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6755081df770180856ca48694b40cd34c2208128">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/prov-1.51.0.0_787ac89e187ffc60760acf6a8a178a98d8e7b742.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/Illustrator/react-native-pdf-lib/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="837ea2c26c5a41ea223e0a850e8e256a2d0b3d75">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/Illustrator-react-native-pdf-lib-unspecified_ddd9372365b6910420eade0c97c653d784f74923.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/Illustrator/react-native-i18n/unspecified/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="393e0f0377b3718a15209678eac8c62b7665f7eb">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/Illustrator-react-native-i18n-unspecified_48546232fc5f58c203d4fad7cb63884f4eb004e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_ab93c3e4d4976825a2726b0274f5ad8b0f32ce5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_14e81c146cb2688f55f79d51158b9cd0d8b7d7c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_4f903ea665c857bced113c543d398f06a7df1997.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_da4456c8582bc90da7160c98dd89b79a1f14b918.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.tom_roush/pdfbox-android/1.8.9.1/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5d5404ac6a8ac3d09018be6b5625606a771eaa4f">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.tom_roush-pdfbox-android-1.8.9.1_5a468d509a4a677aa680048a8fb0f372b7073d41.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_58f4ea429f0098f4a817e1aee6a007d2c3536ce9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.55.4_a77ac065f8ce123bd39231f3fafeb4a1c58a309f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fbcore/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="37345de2ed2772f385eaeec37a9c2ff0fea99ad7">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fbcore-1.3.0_da4456c8582bc90da7160c98dd89b79a1f14b918.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_4a5a629089a9d6b1e543aded0a1412d544944e34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3392c3e69ef905fe1195c23473b7a9b8c0934d52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_165550efff8ff51133cf00d2ddc688d7363c1713.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_26b7d2ce4f18418c466f0ec8c53a3867507c7fdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/core/1.51.0.0/f642963312ea0e615ad65f28adc5a5b3a2a0862/core-1.51.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0f642963312ea0e615ad65f28adc5a5b3a2a0862">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/core-1.51.0.0_6f99e180c4051b468aca8010075d93d48aa613c2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c31e21b53ff2f74664e498248d01453a32e32d48">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.0.1_7c677cd0ad60f14939bc6ff92e90236e9c8bf38a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/Illustrator/react-native-html-to-pdf/unspecified/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="33e42a70c8cf146a64f20c256e1e53362a8f9fd9">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/Illustrator-react-native-html-to-pdf-unspecified_427b9b50df9b8f7cffcc938d599a978959b470b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_3a07f5394c6cf0677ab86124e6bb48ee8eb15821.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_831b8e3e5ab8c94bd6de643e17c1b3bc14a29c4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/Illustrator/react-native-pdf-lib/unspecified/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="837ea2c26c5a41ea223e0a850e8e256a2d0b3d75">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/Illustrator-react-native-pdf-lib-unspecified_ddd9372365b6910420eade0c97c653d784f74923.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/drawee/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c65a2e39d54023bac3aef64a2f0cff89289c7ff6">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-drawee-1.3.0_58f4ea429f0098f4a817e1aee6a007d2c3536ce9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/fresco/1.3.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="fe85b87215e405f5917d40ae4960488ac9224b74">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-fresco-1.3.0_ab93c3e4d4976825a2726b0274f5ad8b0f32ce5b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fbui.textlayoutbuilder/textlayoutbuilder/1.0.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f90b593491e4044903f0bbf68dc3fa2790b151b9">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fbui.textlayoutbuilder-textlayoutbuilder-1.0.0_fb215f01090fe91e437694258d7039d9c736ae54.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.1/support-annotations-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="1fce89a6428c51467090d7f424e4c9c3dbd55f7e">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/support-annotations-23.0.1_a179e3d07ed911b21747f7c815fcf3b51ad23330.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.facebook.fbui.textlayoutbuilder/staticlayout-proxy/1.0/f162442a19fff13995fbd51ba414d9ee05579080/staticlayout-proxy-1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="f162442a19fff13995fbd51ba414d9ee05579080">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/staticlayout-proxy-1.0_4f903ea665c857bced113c543d398f06a7df1997.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_ab57dc22cb770cadf029a83e84610c3a93089961.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/Illustrator/react-native-i18n/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="393e0f0377b3718a15209678eac8c62b7665f7eb">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/Illustrator-react-native-i18n-unspecified_48546232fc5f58c203d4fad7cb63884f4eb004e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d86429b0f0b3f3cafbeb78dda1b9d89119ccb05d">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.0.1_14e81c146cb2688f55f79d51158b9cd0d8b7d7c6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/pkix/1.51.0.0/40a445852ca58187fc616e3a8b42de463bf14b8b/pkix-1.51.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="40a445852ca58187fc616e3a8b42de463bf14b8b">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/pkix-1.51.0.0_cc603103faf68409368c124e0bf482778336e3d9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.13.0/a9283170b7305c8d92d25aff02a6ab7e45d06cbe/okio-1.13.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="a9283170b7305c8d92d25aff02a6ab7e45d06cbe">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/okio-1.13.0_044cc1ad9f6d5dead8e11ef06ec275520c789542.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/3.0.0/5871fb60dc68d67da54a663c3fd636a10a532948/jsr305-3.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5871fb60dc68d67da54a663c3fd636a10a532948">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/jsr305-3.0.0_da88f87763f49def10f4dd00175061453d830a45.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-base/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="72128af126ddd7d6252da9357fe560d3abcdfb0c">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-base-1.3.0_ed2a0ea84dd9d7e25d012d506401e114bf74c509.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/prov/1.51.0.0/6755081df770180856ca48694b40cd34c2208128/prov-1.51.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6755081df770180856ca48694b40cd34c2208128">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/prov-1.51.0.0_787ac89e187ffc60760acf6a8a178a98d8e7b742.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="48c7f54c2515a2312d3a4481d10c43fbb807f3af">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-1.3.0_11af005d8ab32e8fe6baff6d12279b10ee360394.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.tom_roush/pdfbox-android/1.8.9.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="5d5404ac6a8ac3d09018be6b5625606a771eaa4f">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.tom_roush-pdfbox-android-1.8.9.1_5a468d509a4a677aa680048a8fb0f372b7073d41.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.fresco/imagepipeline-okhttp3/1.3.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="c03c08c9934b23c8c09c803345ec51a74119127b">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.fresco-imagepipeline-okhttp3-1.3.0_ebb56ddc362b0a9e7ee10287c490901c8acfaa2a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.parse.bolts/bolts-tasks/1.4.0/d85884acf6810a3bbbecb587f239005cbc846dc4/bolts-tasks-1.4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/bolts-tasks-1.4.0_4a5a629089a9d6b1e543aded0a1412d544944e34.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.1/jars/libs/internal_impl-23.0.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="aa92916125166649d8ad4ba3940c3dd7515596d3">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/internal_impl-23.0.1_ab57dc22cb770cadf029a83e84610c3a93089961.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.6.0/69edde9fc4b01c9fd51d25b83428837478c27254/okhttp-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="69edde9fc4b01c9fd51d25b83428837478c27254">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/okhttp-3.6.0_165550efff8ff51133cf00d2ddc688d7363c1713.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="e31331bdf6b5952badadbfc171f04b95c55d3b16">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.react-react-native-0.55.4_a77ac065f8ce123bd39231f3fafeb4a1c58a309f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp-urlconnection/3.6.0/3f9b16b774f2c36cfd86dd2053d0b3059531dacc/okhttp-urlconnection-3.6.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="3f9b16b774f2c36cfd86dd2053d0b3059531dacc">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/okhttp-urlconnection-3.6.0_831b8e3e5ab8c94bd6de643e17c1b3bc14a29c4e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.react/react-native/0.55.4/jars/libs/infer-annotations-4.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="9809e90be788acdb479b2b44e2112f3295a03068">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/infer-annotations-4.0_3a07f5394c6cf0677ab86124e6bb48ee8eb15821.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/javax.inject/javax.inject/1/6975da39a7040257bd51d21a231b76c915872d38/javax.inject-1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="6975da39a7040257bd51d21a231b76c915872d38">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/javax.inject-1_3392c3e69ef905fe1195c23473b7a9b8c0934d52.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/com.facebook.soloader/soloader/0.1.0/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="8f615bca00639150c9eb6175d4b5471193f70794">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/com.facebook.soloader-soloader-0.1.0_26b7d2ce4f18418c466f0ec8c53a3867507c7fdf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/exploded-aar/Illustrator/react-native-html-to-pdf/unspecified/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="23.0.1"
+        sha1="33e42a70c8cf146a64f20c256e1e53362a8f9fd9">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/Illustrator-react-native-html-to-pdf-unspecified_427b9b50df9b8f7cffcc938d599a978959b470b1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/yusheng/.gradle/caches/modules-2/files-2.1/com.madgag.spongycastle/core/1.51.0.0/f642963312ea0e615ad65f28adc5a5b3a2a0862/core-1.51.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="23.0.1"
+        sha1="0f642963312ea0e615ad65f28adc5a5b3a2a0862">
+        <dex dex="/Users/yusheng/thinktum/illustratorReact/Illustrator/android/app/build/intermediates/pre-dexed/debug/core-1.51.0.0_6f99e180c4051b468aca8010075d93d48aa613c2.jar" />
+    </item>
+
+</items>

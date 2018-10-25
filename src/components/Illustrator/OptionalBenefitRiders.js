@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { View, Text, StyleSheet, Picker, TextInput } from 'react-native';
 import { connect } from 'react-redux';
+import I18n from '../../i18n/i18n';
 
 class OptionalBenefitRiders extends Component {
   constructor(props) {
@@ -46,20 +47,20 @@ class OptionalBenefitRiders extends Component {
     if (this.renderCondition() === 'none') {
         return (
             <View style={styles.formContainer}>
-                <Text style={styles.fieldTitles}>Optional Benefit Riders</Text>
+                <Text style={styles.fieldTitles}>{I18n.t('optionalBenefitsRiders')}</Text>
                 <View style={styles.field}>
-                    <Text>Hospital Cash</Text>
+                    <Text>{I18n.t('hospitalCash')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.hospitalCash}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeHospitalCash(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                         </Picker>
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Accidental Death</Text>
+                    <Text>{I18n.t('accidentalDeath')}</Text>
                     <TextInput 
                         underlineColorAndroid='transparent' 
                         placeholder="50000" 
@@ -69,11 +70,11 @@ class OptionalBenefitRiders extends Component {
                     </TextInput>
                 </View>
                 <View style={styles.field}>
-                    <Text>Child Term{"\n"}Benefit</Text>
+                    <Text>{I18n.t('childTermBenefit')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.childTermBenefit}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeChildTermBenefit(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                         </Picker>
@@ -85,13 +86,13 @@ class OptionalBenefitRiders extends Component {
     else if (this.renderCondition() === 'both') {
         return (
             <View style={styles.formContainer}>
-                <Text style={styles.fieldTitles}>Optional Benefit Riders</Text>
+                <Text style={styles.fieldTitles}>{I18n.t('optionalBenefitsRiders')}</Text>
                 <View style={styles.field}>
-                    <Text>Hospital Cash</Text>
+                    <Text>{I18n.t('hospitalCash')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.hospitalCash}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeHospitalCash(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                             <Picker.Item label="$25 per day" value="TWENTYFIVE_DOLLARS_PER_DAY" />
@@ -101,7 +102,7 @@ class OptionalBenefitRiders extends Component {
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Accidental Death</Text>
+                    <Text>{I18n.t('accidentalDeath')}</Text>
                     <TextInput 
                         underlineColorAndroid='transparent' 
                         placeholder="50000" 
@@ -111,11 +112,11 @@ class OptionalBenefitRiders extends Component {
                     </TextInput>
                 </View>
                 <View style={styles.field}>
-                    <Text>Child Term{"\n"}Benefit</Text>
+                    <Text>{I18n.t('childTermBenefit')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.childTermBenefit}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeChildTermBenefit(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                             <Picker.Item label="$5,000" value="FIVE_THOUSAND" />
@@ -130,13 +131,13 @@ class OptionalBenefitRiders extends Component {
     else if (this.renderCondition() === 'only-cash') {
         return (
             <View style={styles.formContainer}>
-                <Text style={styles.fieldTitles}>Optional Benefit Riders</Text>
+                <Text style={styles.fieldTitles}>{I18n.t('optionalBenefitsRiders')}</Text>
                 <View style={styles.field}>
-                    <Text>Hospital Cash</Text>
+                    <Text>{I18n.t('hospitalCash')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.hospitalCash}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeHospitalCash(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                             <Picker.Item label="$25 per day" value="TWENTYFIVE_DOLLARS_PER_DAY" />
@@ -146,7 +147,7 @@ class OptionalBenefitRiders extends Component {
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Accidental Death</Text>
+                    <Text>{I18n.t('accidentalDeath')}</Text>
                     <TextInput 
                         underlineColorAndroid='transparent' 
                         placeholder="50000" 
@@ -156,11 +157,11 @@ class OptionalBenefitRiders extends Component {
                     </TextInput>
                 </View>
                 <View style={styles.field}>
-                    <Text>Child Term{"\n"}Benefit</Text>
+                    <Text>{I18n.t('childTermBenefit')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.childTermBenefit}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeChildTermBenefit(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                         </Picker>
@@ -172,20 +173,20 @@ class OptionalBenefitRiders extends Component {
     else if (this.renderCondition() === 'only-ctb') {
         return (
             <View style={styles.formContainer}>
-                <Text style={styles.fieldTitles}>Optional Benefit Riders</Text>
+                <Text style={styles.fieldTitles}>{I18n.t('optionalBenefitsRiders')}</Text>
                 <View style={styles.field}>
-                    <Text>Hospital Cash</Text>
+                    <Text>{I18n.t('hospitalCash')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.hospitalCash}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeHospitalCash(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                         </Picker>
                     </View>
                 </View>
                 <View style={styles.field}>
-                    <Text>Accidental Death</Text>
+                    <Text>{I18n.t('accidentalDeath')}</Text>
                     <TextInput 
                         underlineColorAndroid='transparent' 
                         placeholder="50000" 
@@ -195,11 +196,11 @@ class OptionalBenefitRiders extends Component {
                     </TextInput>
                 </View>
                 <View style={styles.field}>
-                    <Text>Child Term{"\n"}Benefit</Text>
+                    <Text>{I18n.t('childTermBenefit')}</Text>
                     <View style={{backgroundColor: '#ecf0f1', marginBottom: 10 }}>
                         <Picker
                             selectedValue={this.props.childTermBenefit}
-                            style={{ height: 30, width: 250}}
+                            style={{ height: 40, width: 250}}
                             onValueChange={(itemValue) => this.props.changeChildTermBenefit(itemValue)}>
                             <Picker.Item label="---------------" value="" />
                             <Picker.Item label="$5,000" value="FIVE_THOUSAND" />
@@ -225,7 +226,8 @@ function mapStateToProps(state) {
         hospitalCash: state.hospitalCash,
         accidentalDeath: state.accidentalDeath,
         childTermBenefit: state.childTermBenefit,
-        riders: state.riders
+        riders: state.riders,
+        language: state.language
     }
 }
 
@@ -241,7 +243,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(OptionalBenefitRider
 
 const styles = StyleSheet.create({
     input: {
-        height: 30,
+        height: 40,
         width: 250,
         backgroundColor: '#ecf0f1',
         paddingLeft: 8,
@@ -268,6 +270,7 @@ const styles = StyleSheet.create({
     },
     fieldTitles: {
         margin: 10, 
-        fontSize: 20
+        fontSize: 23,
+        textAlign: 'center'
     }
 });

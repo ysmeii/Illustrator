@@ -13,6 +13,8 @@ import TermRiders from './TermRiders';
 import OptionalBenefitRiders from './OptionalBenefitRiders';
 import Calculator from './Calculator';
 import Update from './Update';
+import ForwardBackwards from './ForwardBackwards';
+import CalculatorSelection from './CalculatorSelection'
 
 class NewIllustrator extends Component {
     constructor(props) {
@@ -20,6 +22,7 @@ class NewIllustrator extends Component {
         this.state = {
             defaultState: {
                 modeOfPayment: 'monthly-payment',
+                calculatorType: 'premiums',
                 coverageName: 'n/a',
                 coverageTerm: '',
                 faceAmount: '0.00',
@@ -63,21 +66,22 @@ class NewIllustrator extends Component {
         header: null
     };
 
-    componentDidMount() {
-        this.props.passData(this.props.navigation.getParam('initialState', this.state.defaultState));
-    }
+    // getData() {
+    //     this.props.passData(this.props.navigation.getParam('initialState', this.state.defaultState));
+    // }
 
     render() {
+        //this.getData()
         return (
             <ScrollView contentContainerStyle={styles.container}>
                 <HeaderLogo />
-                <NewSaveIllustration navigation={this.props.navigation} />
                 <ReviewSavePrint />
+                <NewSaveIllustration navigation={this.props.navigation} />
                 <Calculator />
+                <CalculatorSelection />
                 <InsuredInformation />
                 <BasePlan />
                 <TermRiders />
-                <OptionalBenefitRiders />
             </ScrollView>
         );
     }
