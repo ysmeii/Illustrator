@@ -7,7 +7,8 @@ class Calculator extends Component {
 
     fetchApiData = () => {
         if (this.props.planTypeSelected === 'term-insurance') {
-            fetch('https://staging.consumerapi.cppdev.ca/quotes', {
+            if (this.props.calculatorType === 'premiums') {
+                fetch('https://staging.consumerapi.cppdev.ca/quotes', {
                 method: 'POST',
                 headers: {
                     "x-api-key": 'b1aae0c9-4a13-461a-b9fd-811bab8957f9',
@@ -93,6 +94,38 @@ class Calculator extends Component {
                 .catch((error) => {
                     console.error(error);
                 });
+            }
+            else if (this.props.calculatorType === 'faceAmount') {
+                fetch('https://qa.consumerapi.cppdev.ca/quotes/reverse/', {
+                method: 'POST',
+                headers: {
+                    "x-api-key": 'b1aae0c9-4a13-461a-b9fd-811bab8957f9',
+                    "Accept": 'application/json',
+                    "Content-Type": 'application/json',
+                },
+                body: JSON.stringify({
+                    "ageNearest": this.props.ageNearest,
+                    "gender": this.props.gender,
+                    "smokerStatus": this.props.smoker,
+                    "plan": this.props.termPlan,
+                    "term": this.props.termPeriod,
+                    "targetPremium": this.props.targetPremium
+                })
+            })
+                .then((response) => response.json())
+                .then((responseJson) => {
+                    if (this.props.modeOfPayment === 'monthly-payment') {
+                        console.log("WTF");
+                        if (this.props.ageNearest === '63' && this.props.gender && this.props.smoker && this.props.termPlan && this.props.termPeriod && this.props.targetPremium.monthlyPremiumsCents === '25000') {
+                            console.log("POOPOO", responseJson);
+                            this.props.passFaceAmount(responseJson.faceAmount);
+                        }
+                    }
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+            }
         }
         else if (this.props.planTypeSelected === 'permanent-insurance') {
             fetch('https://staging.consumerapi.cppdev.ca/quotes', {
@@ -283,7 +316,8 @@ function mapStateToProps(state) {
         hospitalCashName: state.hospitalCashName,
         rider1PlanName: state.rider1PlanName,
         rider2PlanName: state.rider2PlanName,
-        language: state.language
+        language: state.language,
+        targetPremium: state.targetPremium
     }
 }
 
@@ -296,7 +330,8 @@ function mapDispatchToProps(dispatch) {
         passAccidentalDeathPremium: (premium) => dispatch({ type: 'UPDATE_ACCIDENTAL_DEATH_PREMIUM', payload: premium }),
         passChildTermBenefitPremium: (premium) => dispatch({ type: 'UPDATE_CHILD_TERM_BENEFIT_PREMIUM', payload: premium }),
         passHospitalCashPremium: (premium) => dispatch({ type: 'UPDATE_HOSPITAL_CASH_PREMIUM', payload: premium }),
-        passTotalPremium: (premium) => dispatch({ type: 'UPDATE_TOTAL_PREMIUM', payload: premium })
+        passTotalPremium: (premium) => dispatch({ type: 'UPDATE_TOTAL_PREMIUM', payload: premium }),
+        passFaceAmount: (premium) => dispatch({ type: 'UPDATE_FACE_AMOUNT', payload: premium }),
     }
 }
 

@@ -49,13 +49,17 @@ const initialState = {
   termRider2Premium: '',
   hospitalCashName: '',
   childTermBenefitName: '',
-  language: 'en'
+  language: 'en',
+  monthlyPremium: '',
+  targetPremium: {
+    monthlyPremiumsCents: ''
+  }
 }
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'UPDATE_DATA':
-    console.log("updating data", action.payload);
+      console.log("updating data", action.payload);
       return {
         ...state,
         modeOfPayment: action.payload.modeOfPayment,
@@ -96,7 +100,7 @@ const reducer = (state = initialState, action) => {
         childTermBenefitName: action.payload.childTermBenefitName
       }
     case 'CHANGE_CALCULATOR_TYPE':
-      return { ...state, calculatorType: action.payload }
+      return { ...state, calculatorType: action.payload, faceAmount: '0.00', desiredFaceAmount: '' }
     case 'UPDATE_BASE_PREMIUM':
       return { ...state, basePremium: action.payload / 100 }
     case 'UPDATE_TOTAL_PREMIUM':
@@ -253,10 +257,25 @@ const reducer = (state = initialState, action) => {
     case 'UPDATE_PERMANENT_PERIOD':
       return { ...state, permanentPeriod: action.payload }
     case 'UPDATE_DESIRED_FACE_AMOUNT':
+      if (state.calculatorType === 'premiums') {
+        return {
+          ...state,
+          desiredFaceAmount: action.payload,
+          faceAmount: action.payload
+        }
+      }
+      else if (state.calculatorType === 'faceAmount') {
+        return {
+          ...state,
+          targetPremium: { ...state.targetPremium, monthlyPremiumsCents: action.payload },
+          basePremium: (action.payload / 100).toFixed(2)
+        }
+      }
+    case 'UPDATE_FACE_AMOUNT':
       return {
         ...state,
-        desiredFaceAmount: action.payload,
-        faceAmount: action.payload
+        desiredFaceAmount: (action.payload).toFixed(2),
+        faceAmount: (action.payload).toFixed(2)
       }
     case 'UPDATE_TERM_RIDER_PLAN_1':
       if (action.payload === 'LEVEL_TEN') {

@@ -43,6 +43,6 @@ export default {
     no: 'No',
     termInsurance: 'Term Insurance',
     permanentInsurance: 'Permanent Insurance',
-    paymentPeriod: 'Term',
-    monthlyPremiums: 'Monthly\nPremiums'
+    paymentPeriod: 'Payment Period',
+    monthlyPremiums: 'Monthly\nPremiums',
 };
