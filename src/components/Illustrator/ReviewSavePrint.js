@@ -16,13 +16,13 @@ class ReviewSavePrint extends Component {
         const page1 = PDFPage
             .create()
             .setMediaBox(500, 800)
-            .drawText('CPP Simplified Elite 10 Year Term', {
+            .drawText(this.props.coverageName + " " + this.props.coverageTerm, {
                 x: 20,
                 y: 750,
                 fontSize: 23,
                 fontWeight: 'bold'
             })
-            .drawText('Prepared for: Tom Brady', {
+            .drawText('Prepared for: ' + this.props.firstName + " " + this.props.lastName, {
                 x: 20,
                 y: 720
             })
@@ -30,7 +30,7 @@ class ReviewSavePrint extends Component {
                 x: 20,
                 y: 705
             })
-            .drawText('Life Insured: Tom Brady, Male, Age 40, Smoker', {
+            .drawText(`Life Insured: ${this.props.firstName} ${this.props.lastName}, ${this.props.gender}, Age ${this.props.ageNearest}, ${this.props.smoker}`, {
                 x: 20,
                 y: 690
             })
@@ -38,20 +38,28 @@ class ReviewSavePrint extends Component {
                 x: 20,
                 y: 650
             })
-            .drawText('CPP Simplified Elite 10 Year Term', {
+            .drawText(this.props.coverageName + " " + this.props.coverageTerm, {
                 x: 20,
                 y: 635
             })
-            .drawText('Annual Premium', {
+            .drawText('Face Amount', {
                 x: 20,
                 y: 595
             })
-            .drawText('$328.00', {
+            .drawText(`$${this.props.faceAmount}`, {
                 x: 20,
                 y: 580
             })
+            .drawText('Monthly Premium', {
+                x: 20,
+                y: 540
+            })
+            .drawText(`$${this.props.basePremium}`, {
+                x: 20,
+                y: 525
+            })
 
-        const pdfPath = `/sdcard/Android/pdf/CPPSimplifiedElitePlan.pdf`;
+        const pdfPath = `/sdcard/Android/pdf/${this.props.coverageName} ${this.props.coverageTerm}.pdf`;
 
         PDFDocument
             .create(pdfPath)

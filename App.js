@@ -102,7 +102,7 @@ const reducer = (state = initialState, action) => {
     case 'CHANGE_CALCULATOR_TYPE':
       return { ...state, calculatorType: action.payload, faceAmount: '0.00', desiredFaceAmount: '' }
     case 'UPDATE_BASE_PREMIUM':
-      return { ...state, basePremium: action.payload / 100 }
+      return { ...state, basePremium: (action.payload / 100).toFixed(2) }
     case 'UPDATE_TOTAL_PREMIUM':
       return { ...state, totalPremium: action.payload / 100 }
     case 'CHANGE_MODE_OF_PAYMENT':
@@ -268,7 +268,8 @@ const reducer = (state = initialState, action) => {
         return {
           ...state,
           targetPremium: { ...state.targetPremium, monthlyPremiumsCents: action.payload },
-          basePremium: (action.payload / 100).toFixed(2)
+          basePremium: (action.payload / 100).toFixed(2),
+          totalPremium: (action.payload / 100).toFixed(2)
         }
       }
     case 'UPDATE_FACE_AMOUNT':
