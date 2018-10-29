@@ -7,7 +7,19 @@ class InsuredInformation extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            validAge: true
         };
+    }
+
+    validateAgeNearest(text) {
+        if (text >= 0 && text <= 100) {
+            this.setState({ validAge: true })
+            this.props.changeAgeNearest(text)
+        }
+        else {
+            this.setState({ validAge: false })
+            this.props.changeAgeNearest(text)
+        }
     }
 
     render() {
@@ -43,12 +55,15 @@ class InsuredInformation extends Component {
                 </View>
                 <View style={styles.field}>
                     <Text>{I18n.t('ageNearest')}</Text>
-                    <TextInput
-                        underlineColorAndroid='transparent'
-                        style={styles.input}
-                        onChangeText={(text) => { this.props.changeAgeNearest(text) }}
-                        value={this.props.ageNearest}>
-                    </TextInput>
+                    <View style={{ flexDirection: 'column' }}>
+                        <TextInput
+                            underlineColorAndroid='transparent'
+                            style={styles.inputAgeNearest}
+                            onChangeText={(text) => { this.validateAgeNearest(text) }}
+                            value={this.props.ageNearest}>
+                        </TextInput>
+                        <Text style={{ marginBottom: 3, marginTop: 0, padding: 0 }}>{this.state.validAge ? '' : "Please enter a valid age"}</Text>
+                    </View>
                 </View>
                 <View style={styles.field}>
                     <Text>{I18n.t('gender')}</Text>
@@ -158,6 +173,13 @@ const styles = StyleSheet.create({
         backgroundColor: '#ecf0f1',
         paddingLeft: 8,
         marginBottom: 10
+    },
+    inputAgeNearest: {
+        height: 40,
+        width: 250,
+        backgroundColor: '#ecf0f1',
+        paddingLeft: 8,
+        marginBottom: 0
     },
     field: {
         flex: 1,
