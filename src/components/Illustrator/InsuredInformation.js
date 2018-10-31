@@ -62,7 +62,7 @@ class InsuredInformation extends Component {
                             onChangeText={(text) => { this.validateAgeNearest(text) }}
                             value={this.props.ageNearest}>
                         </TextInput>
-                        <Text style={{ marginBottom: 3, marginTop: 0, padding: 0 }}>{this.state.validAge ? '' : "Please enter a valid age"}</Text>
+                        <Text style={{ marginBottom: 4, marginTop: 0, padding: 0 }}>{this.state.validAge ? '' : "Please enter a valid age"}</Text>
                     </View>
                 </View>
                 <View style={styles.field}>
