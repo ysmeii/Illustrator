@@ -115,9 +115,7 @@ class Calculator extends Component {
                 .then((response) => response.json())
                 .then((responseJson) => {
                     if (this.props.modeOfPayment === 'monthly-payment') {
-                        console.log("WTF");
                         if (this.props.ageNearest === '63' && this.props.gender && this.props.smoker && this.props.termPlan && this.props.termPeriod && this.props.targetPremium.monthlyPremiumsCents === '25000') {
-                            console.log("POOPOO", responseJson);
                             this.props.passFaceAmount(responseJson.faceAmount);
                         }
                     }
