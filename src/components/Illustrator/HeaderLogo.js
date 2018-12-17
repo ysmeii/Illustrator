@@ -13,7 +13,7 @@ class HeaderLogo extends Component {
     render() {
         return (
             <View style={styles.title}>
-                <Image style={styles.logo} source={require('../../images/cpplogo.png')} />
+                {/* <Image style={styles.logo} source={require('../../images/cpplogo.png')} /> */}
                 <Picker
                     selectedValue={this.props.language}
                     style={{ height: 30, width: 125 }}
